@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://v0gq5e6p28f2"]
+
+[ext_resource type="Script" path="res://Scripts/ChimbaBench.gd" id="1_vgdng"]
+[ext_resource type="Script" path="res://Scripts/GUI_Info.gd" id="2_c4yar"]
+
+[node name="ChimbaBench" type="Node3D"]
+script = ExtResource("1_vgdng")
+
+[node name="GUI_Info" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 645.0
+script = ExtResource("2_c4yar")
+
+[node name="Label" type="Label" parent="GUI_Info"]
+layout_mode = 0
+offset_right = 394.0
+offset_bottom = 84.0
+
+[node name="Label2" type="Label" parent="GUI_Info"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 149.0
+offset_right = 397.0
+offset_bottom = 233.0
+
+[node name="Label3" type="Label" parent="GUI_Info"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 264.0
+offset_right = 398.0
+offset_bottom = 348.0
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.873925, 0.486061, 0, -0.486061, 0.873925, 0, 1.58542, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0107483, -2.2442)
+size = Vector3(5, 0.05, 5)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0178552, -3.52372)
+radius = 0.641
+height = 1.383
+sides = 24
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05829, 0.836722, -3.08605)
+light_size = 0.143
+shadow_enabled = true
